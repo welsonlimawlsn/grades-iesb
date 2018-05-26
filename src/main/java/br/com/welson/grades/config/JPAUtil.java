@@ -1,6 +1,6 @@
 package br.com.welson.grades.config;
 
-import javax.inject.Named;
+import javax.enterprise.context.Dependent;
 import javax.enterprise.context.RequestScoped;
 import javax.enterprise.inject.Disposes;
 import javax.enterprise.inject.Produces;
@@ -9,7 +9,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import java.io.Serializable;
 
-@Named
+@Dependent
 public class JPAUtil implements Serializable {
 
     private static EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("default");
