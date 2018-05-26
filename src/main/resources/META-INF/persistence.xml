@@ -9,7 +9,7 @@
         <class>br.com.welson.grades.persistence.model.Evaluation</class>
         <class>br.com.welson.grades.persistence.model.Grade</class>
         <class>br.com.welson.grades.persistence.model.Matter</class>
-        <jta-data-source>java:jboss/datasources/MySQLDS</jta-data-source> 
+        <non-jta-data-source>java:/comp/env/jdbc/MysqlDS</non-jta-data-source>
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>
             <property name="hibernate.archive.autodetection" value="class"/>
