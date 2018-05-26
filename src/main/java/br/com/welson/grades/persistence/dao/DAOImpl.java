@@ -10,9 +10,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import javax.persistence.PersistenceContext;
 
 public class DAOImpl<T extends AbstractEntity> implements GenericDAO<T>, Serializable {
 
+    @PersistenceContext
     private EntityManager entityManager;
     private Class<T> classType;
     private static final FileXMLService HQL_QUERY;
