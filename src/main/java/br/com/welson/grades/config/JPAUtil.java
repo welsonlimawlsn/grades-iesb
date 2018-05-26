@@ -7,9 +7,10 @@ import javax.enterprise.inject.Produces;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import java.io.Serializable;
 
 @Named
-public class JPAUtil {
+public class JPAUtil implements Serializable {
 
     private static EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("default");
 
