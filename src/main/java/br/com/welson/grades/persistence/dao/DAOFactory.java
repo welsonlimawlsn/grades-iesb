@@ -10,6 +10,7 @@ import javax.persistence.EntityManager;
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 
+@Dependent
 public class DAOFactory implements Serializable {
 
     @Inject
