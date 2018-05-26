@@ -9,13 +9,16 @@
         <class>br.com.welson.grades.persistence.model.Evaluation</class>
         <class>br.com.welson.grades.persistence.model.Grade</class>
         <class>br.com.welson.grades.persistence.model.Matter</class>
-        <non-jta-data-source>java:/comp/env/jdbc/MysqlDS</non-jta-data-source>
         <properties>
+            <property name="hibernate.connection.url" value="jdbc:mysql://mysql:3306/grades"/>
+            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>
+            <property name="hibernate.connection.username" value="root"/>
+            <property name="hibernate.connection.password" value="root"/>
             <property name="hibernate.archive.autodetection" value="class"/>
             <property name="hibernate.show_sql" value="false"/>
             <property name="hibernate.format_sql" value="false"/>
             <property name="hibernate.hbm2ddl.auto" value="update"/>
         </properties>
     </persistence-unit>
-</persistence>
+</persistence> 
