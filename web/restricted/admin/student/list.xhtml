@@ -1,0 +1,38 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                template="../../../WEB-INF/templates/templateAdmin.xhtml"
+>
+    <ui:define name="content">
+        <h1><h:outputText value="All Students"/></h1>
+        <h:form>
+            <h:dataTable value="#{studentListBean.students}" var="student" styleClass="table">
+                <h:column>
+                    <f:facet name="header">
+                        #
+                    </f:facet>
+                    <h:outputText value="#{student.id}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        Username
+                    </f:facet>
+                    <h:outputText value="#{student.username}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        Name
+                    </f:facet>
+                    <h:outputText value="#{student.student.name}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        Delete
+                    </f:facet>
+                    <h:commandButton styleClass="btn btn-danger" value="Delete" actionListener="#{studentListBean.delete(student)}"/>
+                </h:column>
+            </h:dataTable>
+        </h:form>
+    </ui:define>
+</ui:composition>

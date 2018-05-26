@@ -1,0 +1,24 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:g="http://java.sun.com/jsf/html"
+                template="../../../WEB-INF/templates/templateAdmin.xhtml"
+>
+    <ui:define name="content">
+        <h1><h:outputText value="Create Matter"/></h1>
+        <h:form>
+            <div class="form-group">
+                <h:outputLabel for="name" value="Name"/>
+                <h:inputText id="name" styleClass="form-control" value="#{createMatterBean.matter.name}"/>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="type" value="Type"/>
+                <h:selectOneMenu id="type" styleClass="form-control" value="#{createMatterBean.matter.type}">
+                    <f:selectItems value="#{createMatterBean.types}"/>
+                </h:selectOneMenu>
+            </div>
+            <h:commandButton actionListener="#{createMatterBean.save}" value="Save" styleClass="btn btn-primary"/>
+        </h:form>
+    </ui:define>
+</ui:composition>

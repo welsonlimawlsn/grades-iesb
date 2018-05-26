@@ -1,0 +1,90 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                template="../../../WEB-INF/templates/templateStudent.xhtml"
+>
+    <ui:define name="content">
+        <f:metadata>
+            <f:viewParam name="id" value="#{editGrateBean.id}" required="true"
+                         requiredMessage="Use the links to get here"/>
+            <f:viewAction action="#{editGrateBean.init}"/>
+        </f:metadata>
+        <h1><h:outputText value="Edit Grade"/></h1>
+        <h:form>
+            <div class="form-group">
+                <h3 style="font-weight: normal;"><h:outputText value="Matter: #{editGrateBean.grade.matter.name}"/></h3>
+            </div>
+            <h5>Evaluation 1</h5>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <h:outputLabel for="exam" value="Exam"/>
+                        <h:inputText id="exam" value="#{editGrateBean.grade.firstEvaluation.exam}"
+                                     styleClass="form-control"/>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <h:outputLabel for="exercise" value="Exercise"/>
+                        <h:inputText id="exercise" value="#{editGrateBean.grade.firstEvaluation.exercise}"
+                                     styleClass="form-control"/>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <h:outputLabel for="forum" value="Forum"/>
+                        <h:inputText id="forum" value="#{editGrateBean.grade.firstEvaluation.forum}"
+                                     styleClass="form-control"/>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <h:outputLabel for="learningCheck" value="Learning Check"/>
+                        <h:inputText id="learningCheck" value="#{editGrateBean.grade.firstEvaluation.learningCheck}"
+                                     styleClass="form-control"/>
+                    </div>
+                </div>
+            </div>
+            <h5>Evaluation 2</h5>
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <h:outputLabel for="exam2" value="Exam"/>
+                        <h:inputText id="exam2" value="#{editGrateBean.grade.secondEvaluation.exam}"
+                                     styleClass="form-control"/>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <h:outputLabel for="exercise2" value="Exercise"/>
+                        <h:inputText id="exercise2" value="#{editGrateBean.grade.secondEvaluation.exercise}"
+                                     styleClass="form-control"/>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <h:outputLabel for="forum2" value="Forum"/>
+                        <h:inputText id="forum2" value="#{editGrateBean.grade.secondEvaluation.forum}"
+                                     styleClass="form-control"/>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <h:outputLabel for="learningCheck2" value="Learning Check"/>
+                        <h:inputText id="learningCheck2" value="#{editGrateBean.grade.secondEvaluation.learningCheck}"
+                                     styleClass="form-control"/>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <h:outputLabel for="edad" value="EDAD"/>
+                        <h:inputText id="edad" value="#{editGrateBean.grade.secondEvaluation.edad}"
+                                     styleClass="form-control"/>
+                    </div>
+                </div>
+            </div>
+            <h:commandButton value="Save" action="#{editGrateBean.save}" styleClass="btn btn-primary"/>
+        </h:form>
+    </ui:define>
+</ui:composition>

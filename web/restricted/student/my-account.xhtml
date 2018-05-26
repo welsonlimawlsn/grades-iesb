@@ -1,0 +1,36 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                template="../../WEB-INF/templates/templateStudent.xhtml"
+>
+    <ui:define name="content">
+        <f:metadata>
+            <f:viewAction action="#{loginBean.setPasswordAsNull}"/>
+        </f:metadata>
+        <h1>My Account - <h:outputText value="#{loginBean.applicationUser.username}"/></h1>
+        <h:form>
+            <div class="form-group">
+                <h:outputLabel for="name" value="Name"/>
+                <h:inputText value="#{loginBean.applicationUser.student.name}" styleClass="form-control" id="name" required="true" requiredMessage="Name can not be empty"/>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <h:outputLabel for="username" value="Username"/>
+                        <h:inputText value="#{loginBean.applicationUser.username}" id="username" styleClass="form-control" required="true" requiredMessage="Username can not be empty"/>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <h:outputLabel for="password" value="Password"/>
+                        <h:inputSecret value="#{loginBean.applicationUser.password}" id="password" styleClass="form-control"/>
+                        <small class="form-text text-muted">Only if you change the password</small>
+                    </div>
+                </div>
+            </div>
+            <h:commandButton value="Delete my account" styleClass="btn btn-danger" action="#{loginBean.delete}"/>
+            <h:commandButton value="Update" styleClass="btn btn-primary" actionListener="#{loginBean.update}"/>
+        </h:form>
+    </ui:define>
+</ui:composition>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="GradesIESB@localhost" uuid="e846779e-323f-4b9e-b851-b7adb4f00b29">
+      <database-info product="Microsoft SQL Server" version="14.00.1000" jdbc-version="4.2" driver-name="Microsoft JDBC Driver 6.4 for SQL Server" driver-version="6.4.0.0">
+        <extra-name-characters>$#@</extra-name-characters>
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>sa</user-name>
+      <introspection-schemas>GradesIESB:dbo</introspection-schemas>
+    </data-source>
+    <data-source name="default/Hibernate" uuid="3a4d2327-333e-4a16-a3cb-17aa972cde07">
+      <database-info product="Microsoft SQL Server" version="14.00.1000" jdbc-version="4.2" driver-name="Microsoft JDBC Driver 6.4 for SQL Server" driver-version="6.4.0.0">
+        <extra-name-characters>$#@</extra-name-characters>
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <user-name>sa</user-name>
+      <introspection-schemas>GradesIESB:dbo</introspection-schemas>
+    </data-source>
+  </component>
+</project>

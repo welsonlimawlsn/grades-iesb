@@ -1,0 +1,21 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                template="../../../WEB-INF/templates/templateStudent.xhtml"
+>
+    <ui:define name="content">
+        <h:form>
+            <div class="form-group">
+                <h:outputLabel value="Matter" for="matter"/>
+                <h:selectOneMenu value="#{createGradeBean.grade.matter}" id="matter" styleClass="form-control"
+                                 converter="#{matterConverter}">
+                    <f:selectItems value="#{createGradeBean.matters}" var="matter" itemLabel="#{matter.name}"
+                                   itemValue="#{matter}"/>
+                </h:selectOneMenu>
+            </div>
+
+            <h:commandButton styleClass="btn btn-primary" value="Save" action="#{createGradeBean.save}"/>
+        </h:form>
+    </ui:define>
+</ui:composition>
