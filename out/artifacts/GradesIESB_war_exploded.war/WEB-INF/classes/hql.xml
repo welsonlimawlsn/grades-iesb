@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<queries>
-    <query id="applicationUserLogin">SELECT u FROM ApplicationUser u WHERE u.username = :username AND u.password = :password</query>
-    <query id="usernameApplicationUser">SELECT u FROM ApplicationUser u WHERE u.username = :username</query>
-    <query id="applicationUserStudent">SELECT u FROM ApplicationUser u WHERE u.student != null</query>
-    <query id="applicationUserAdmin">SELECT u FROM ApplicationUser u WHERE u.admin != null</query>
-    <query id="gradesByStudent">SELECT g FROM Grade g WHERE g.student = :student</query>
-    <query id="gradesByIdAndStudent">SELECT g FROM Grade g WHERE g.id = :id AND g.student = :student</query>
-</queries>
