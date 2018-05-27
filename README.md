@@ -31,4 +31,5 @@ Projeto usando as seguintes tecnologias:
  - JSF
  - CDI
  - JPA/Hibernate
+ - Interceptors
  - MySQL
