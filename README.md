@@ -18,10 +18,17 @@ Usuário e senha para o admin:
  - Username: admin
  - Password: admin
 
-Caso dê usuário e senha invalido, contatar-me para cria-lo novamente (como está em público, alguém pode apagar ou editar)
+Caso dê usuário ou senha invalido, contatar-me para cria-lo novamente (como está em público, alguém pode apagar ou editar)
 
 Obs.: Não informe dados sensíveis, crie dados fictícios para testar a aplicação.
 
 Aceito sugestões de melhoria.
 
 E-mail: welsonlimawlsn@gmail.com
+
+Projeto usando as seguintes tecnologias:
+ - Java
+ - JSF
+ - CDI
+ - JPA/Hibernate
+ - MySQL
